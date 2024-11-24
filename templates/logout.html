@@ -5,6 +5,7 @@
     Выход из аккаунта
 </h1>
 <form action="logout" method="post">
+    {% csrf_token %}
     <p>
         Логин:
         <br>

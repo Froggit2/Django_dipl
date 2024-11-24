@@ -22,7 +22,7 @@ from DjangoApp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', glavn),
-    path('registr', registr),
-    path('login', login_func),
+    path('register', register),
+    path('login', login),
     path('logout', logout),
 ]

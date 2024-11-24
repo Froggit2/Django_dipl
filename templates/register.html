@@ -2,8 +2,8 @@
 
 {% block content %}
 <h1>Регистрация</h1>
-    <form action="registr" method="post">
-        {{ error }}
+    <form action="register" method="post">
+        {% csrf_token %}
         <p>
             Логин:
             <br>
@@ -16,7 +16,7 @@
             <input type="password" name="password_2" placeholder="Повторите пароль" required>
         </p>
         <p>
-            <button name="registr" type="submit">Зарегестрироваться</button>
+            <button name="register" type="submit">Зарегестрироваться</button>
         </p>
         <p>
             <a href="http://127.0.0.1:8000/login">Уже есть аккаунт?</a>
