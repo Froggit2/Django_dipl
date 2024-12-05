@@ -1,0 +1,19 @@
+{% extends "glavn.html" %}
+
+{% block content %}
+<h1>Продукция</h1>
+{{ message }}
+<form action="products">
+    {% for product in products %}
+        {{ product.name }}
+    <br>
+        {{ product.prise }}
+        <button type="submit">Купить</button>
+    <br>
+    {% endfor %}
+    <br>
+    {{ message }}
+    <br>
+    <a href="http://127.0.0.1:8000/add_product">Хотите добавить собственную продукцию?</a>
+</form>
+{% endblock %}
